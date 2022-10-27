@@ -46,39 +46,88 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
+## Step 1:
+Create a new file in quartus II.
 
+## Step 2:
+Module Declaration. Module should have the file name.
+
+## Step 3:
+Use begin declaration to define the functionality of logic circuits.
+
+## Step 4:
+Within begin use if and else statements.
+
+## Step 5:
+At the end give endmodule.
+
+## Step 6:
+Run the program and choose RTL viewer to get RTL realization.
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:P.Siva Naga Nithin
+RegisterNumber:212221240037  
+```
+### Up Counter:
+```
+module exp6(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_up;
+always@(posedge CLK or posedge reset)
+begin 
+if(reset)
+counter_up<=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
+```
+### Down Counter:
+module down(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge CLK or posedge reset)
+begin 
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
 
 
 
 
 
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+### RTL LOGIC UP COUNTER AND DOWN COUNTER 
+![github.logo](exp6.png)
+
+### Down Counter RTL:
+![github.logo](exp6.1.png)
 
 
+### TIMING DIGRAMS FOR COUNTER 
+![github.logo](td.png)
 
+### Down Counter 
+![github.logo](td2.jpeg)
 
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
 
 
 
 
 
 ### TRUTH TABLE 
+![up truth table](https://user-images.githubusercontent.com/94154780/198287432-d26d74c7-e25d-4323-b0f3-d04cc62cc6a3.png)
+### Down Counter Truth Table:
+![dc truth table](https://user-images.githubusercontent.com/94154780/198287501-635fa552-ce57-4582-bbf3-34e9eaca31c4.png)
+ter Truth Table:
+
+
 
 
 
