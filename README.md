@@ -48,19 +48,14 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### Procedure
 ## Step 1:
 Create a new file in quartus II.
-
 ## Step 2:
 Module Declaration. Module should have the file name.
-
 ## Step 3:
 Use begin declaration to define the functionality of logic circuits.
-
 ## Step 4:
 Within begin use if and else statements.
-
 ## Step 5:
 At the end give endmodule.
-
 ## Step 6:
 Run the program and choose RTL viewer to get RTL realization.
 
@@ -86,6 +81,7 @@ assign counter=counter_up;
 endmodule
 ```
 ### Down Counter:
+```
 module down(input CLK,input reset,output[0:3]counter);
 reg[0:3]counter_down;
 always@(posedge CLK or posedge reset)
@@ -97,7 +93,7 @@ counter_down<=counter_down-4'd1;
 end
 assign counter=counter_down;
 endmodule
-
+```
 
 
 
